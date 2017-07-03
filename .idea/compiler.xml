@@ -12,7 +12,7 @@
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="Library" target="1.5" />
+      <module name="Library" target="1.6" />
       <module name="LibraryFlow" target="1.5" />
       <module name="LibrarySql" target="1.5" />
     </bytecodeTargetLevel>
