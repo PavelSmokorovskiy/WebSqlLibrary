@@ -18,8 +18,6 @@ public class Utils {
     private Map<String, SearchType> searchTypeList = new HashMap<String, SearchType>();
     private String searchString;
 
-
-
     @Autowired
     private MessageSource msg;
 
@@ -36,7 +34,6 @@ public class Utils {
         searchTypeList.put(msg.getMessage("book_name", null, FacesContext.getCurrentInstance().getViewRoot().getLocale()), SearchType.TITLE);
         return searchTypeList;
     }
-
 
     public void setSearchTypeList(Map<String, SearchType> searchTypeList) {
         this.searchTypeList = searchTypeList;

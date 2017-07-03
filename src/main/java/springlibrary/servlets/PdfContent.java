@@ -21,7 +21,6 @@ public class PdfContent extends HttpServlet {
         OutputStream out = response.getOutputStream();
         try {
 
-
             long id = Long.valueOf(request.getParameter("id"));
             Boolean save = Boolean.valueOf(request.getParameter("save"));
 

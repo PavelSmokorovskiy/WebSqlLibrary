@@ -10,7 +10,7 @@ import springlibrary.entities.Genre;
 import java.util.List;
 
 @Component
-public class GenreDAOImpl implements GenreDAO{
+public class GenreDAOImpl implements GenreDAO {
 
     @Autowired
     private SessionFactory sessionFactory;
@@ -20,9 +20,5 @@ public class GenreDAOImpl implements GenreDAO{
     public List<Genre> getGenres() {
         return sessionFactory.getCurrentSession().createCriteria(Genre.class).list();
     }
-
-
-
-
 
 }

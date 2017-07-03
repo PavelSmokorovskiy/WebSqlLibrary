@@ -85,12 +85,11 @@ public class BookDAOImpl implements BookDAO {
 
     }
 
-    private DetachedCriteria createBookCriteria(){
+    private DetachedCriteria createBookCriteria() {
         DetachedCriteria bookListCriteria = DetachedCriteria.forClass(Book.class, "b");
         createAliases(bookListCriteria);
         return bookListCriteria;
     }
-
 
     private void createAliases(DetachedCriteria criteria) {
         criteria.createAlias("b.author", "author");
@@ -98,15 +97,11 @@ public class BookDAOImpl implements BookDAO {
         criteria.createAlias("b.publisher", "publisher");
     }
 
-
     private List<Book> createBookList(DetachedCriteria bookListCriteria) {
         Criteria criteria = bookListCriteria.getExecutableCriteria(sessionFactory.getCurrentSession());
         criteria.addOrder(Order.asc("b.name")).setProjection(bookProjection).setResultTransformer(Transformers.aliasToBean(Book.class));
         return criteria.list();
     }
-
-
-
 
 
 }

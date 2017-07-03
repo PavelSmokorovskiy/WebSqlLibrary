@@ -1,6 +1,5 @@
 package springlibrary.objects;
 
-
 import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
 import springlibrary.entities.Genre;
@@ -10,7 +9,7 @@ import java.io.Serializable;
 
 @Component
 @Scope("singleton")
-public class SearchCriteria implements Serializable{
+public class SearchCriteria implements Serializable {
 
     private String text;
 
@@ -19,9 +18,6 @@ public class SearchCriteria implements Serializable{
     private Character letter;
 
     private Genre genre;
-
-
-
 
     public String getText() {
         return text;
